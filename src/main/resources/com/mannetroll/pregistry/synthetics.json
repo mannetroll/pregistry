@@ -2,16 +2,16 @@
   {
     "name": "synthetics",
     "title": "Elastic Synthetics",
-    "version": "1.1.1",
+    "version": "1.0.1",
     "release": "ga",
     "description": "Internal Elastic integration for providing access to private locations.",
     "type": "integration",
-    "download": "/epr/synthetics/synthetics-1.1.1.zip",
-    "path": "/package/synthetics/1.1.1",
+    "download": "/epr/synthetics/synthetics-1.0.1.zip",
+    "path": "/package/synthetics/1.0.1",
     "icons": [
       {
         "src": "/img/uptime-logo-color-64px.svg",
-        "path": "/package/synthetics/1.1.1/img/uptime-logo-color-64px.svg",
+        "path": "/package/synthetics/1.0.1/img/uptime-logo-color-64px.svg",
         "size": "16x16",
         "type": "image/svg+xml"
       }
@@ -34,6 +34,6 @@
     "categories": [
       "observability"
     ],
-    "signature_path": "/epr/synthetics/synthetics-1.1.1.zip.sig"
+    "signature_path": "/epr/synthetics/synthetics-1.0.1.zip.sig"
   }
 ]
