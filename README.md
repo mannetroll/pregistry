@@ -8,4 +8,13 @@
 
     curl -is "http://127.0.0.1:8088/search?package=apm&prerelease=false&kibana.version=8.11.3"
     curl -is "http://127.0.0.1:8088/search?package=synthetics&prerelease=true&kibana.version=8.11.3"
+    curl -is "http://127.0.0.1:2020/search?kibana.version=8.11.3"
+    curl -is "http://127.0.0.1:2020/categories?kibana.version=8.11.3"
+    
+# kibana
 
+    xpack.fleet.registryUrl: "http://127.0.0.1:2020"
+    xpack.fleet.packages:
+    - name: apm
+      version: latest
+       
