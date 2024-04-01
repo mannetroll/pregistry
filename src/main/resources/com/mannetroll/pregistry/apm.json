@@ -1,0 +1,32 @@
+[ {
+  "name" : "apm",
+  "title" : "Elastic APM",
+  "version" : "8.4.2",
+  "release" : "ga",
+  "description" : "Monitor, detect, and diagnose complex application performance issues.",
+  "type" : "integration",
+  "download" : "/epr/apm/apm-8.4.2.zip",
+  "path" : "/package/apm/8.4.2",
+  "icons" : [ {
+    "src" : "/img/logo_apm.svg",
+    "path" : "/package/apm/8.4.2/img/logo_apm.svg",
+    "title" : "APM Logo",
+    "size" : "32x32",
+    "type" : "image/svg+xml"
+  } ],
+  "policy_templates" : [ {
+    "name" : "apmserver",
+    "title" : "Elastic APM Integration",
+    "description" : "Elastic APM Integration"
+  } ],
+  "conditions" : {
+    "kibana" : {
+      "version" : "^8.4.0"
+    }
+  },
+  "owner" : {
+    "github" : "elastic/apm-server"
+  },
+  "categories" : [ "elastic_stack", "monitoring" ],
+  "signature_path" : "/epr/apm/apm-8.4.2.zip.sig"
+} ]
