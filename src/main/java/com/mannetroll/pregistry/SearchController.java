@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 /*
  * curl -is "http://127.0.0.1:2020/search?package=apm&prerelease=false&kibana.version=8.11.3"
  * curl -is "http://127.0.0.1:2020/search?package=synthetics&prerelease=true&kibana.version=8.11.3"
+ * curl -is "http://127.0.0.1:2020/search?kibana.version=8.11.3"
  * curl -is "http://127.0.0.1:2020/categories?kibana.version=8.11.3"
  *
  */
