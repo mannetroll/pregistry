@@ -21,6 +21,8 @@ import org.springframework.web.bind.annotation.RestController;
 /*
  * curl -is "http://127.0.0.1:2020/search?package=apm&prerelease=false&kibana.version=8.11.3"
  * curl -is "http://127.0.0.1:2020/search?package=synthetics&prerelease=true&kibana.version=8.11.3"
+ * curl -is "http://127.0.0.1:2020/categories?kibana.version=8.11.3"
+ *
  */
 
 @RestController
@@ -28,10 +30,22 @@ public class SearchController {
 	private static final Logger LOG = LogManager.getLogger(SearchController.class);
 
 	@RequestMapping(value = "/search", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public void search(@RequestParam(name = "package") String pname, HttpServletResponse response) throws IOException {
+	public void search(@RequestParam(name = "package", defaultValue = "") String pname, HttpServletResponse response)
+			throws IOException {
 		ServletOutputStream outputStream = response.getOutputStream();
 		LOG.info("package: " + pname);
-		outputStream.println(file(pname + ".json"));
+		if (pname.length() > 1) {
+			outputStream.println(file(pname + ".json"));
+		} else {
+			outputStream.println(file("search.json"));
+		}
+	}
+
+	@RequestMapping(value = "/categories", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	public void categories(HttpServletResponse response) throws IOException {
+		ServletOutputStream outputStream = response.getOutputStream();
+		LOG.info("package: categories");
+		outputStream.println(file("categories.json"));
 	}
 
 	private String file(String json) throws IOException {

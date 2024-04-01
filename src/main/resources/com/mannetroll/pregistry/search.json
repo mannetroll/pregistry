@@ -1,0 +1,552 @@
+[
+  {
+    "name": "apache",
+    "title": "Apache HTTP Server",
+    "version": "1.17.0",
+    "release": "ga",
+    "source": {
+      "license": "Elastic-2.0"
+    },
+    "description": "Collect logs and metrics from Apache servers with Elastic Agent.",
+    "type": "integration",
+    "download": "/epr/apache/apache-1.17.0.zip",
+    "path": "/package/apache/1.17.0",
+    "icons": [
+      {
+        "src": "/img/logo_apache.svg",
+        "path": "/package/apache/1.17.0/img/logo_apache.svg",
+        "title": "Apache Logo",
+        "size": "32x32",
+        "type": "image/svg+xml"
+      }
+    ],
+    "policy_templates": [
+      {
+        "name": "apache",
+        "title": "Apache logs and metrics",
+        "description": "Collect logs and metrics from Apache instances"
+      }
+    ],
+    "conditions": {
+      "kibana": {
+        "version": "^8.10.2"
+      },
+      "elastic": {
+        "subscription": "basic"
+      }
+    },
+    "owner": {
+      "github": "elastic/obs-infraobs-integrations"
+    },
+    "categories": [
+      "web",
+      "observability"
+    ],
+    "signature_path": "/epr/apache/apache-1.17.0.zip.sig"
+  },
+  {
+    "name": "log",
+    "title": "Custom Logs",
+    "version": "2.3.0",
+    "release": "ga",
+    "description": "Collect custom logs with Elastic Agent.",
+    "type": "input",
+    "download": "/epr/log/log-2.3.0.zip",
+    "path": "/package/log/2.3.0",
+    "icons": [
+      {
+        "src": "/img/icon.svg",
+        "path": "/package/log/2.3.0/img/icon.svg",
+        "type": "image/svg+xml"
+      }
+    ],
+    "policy_templates": [
+      {
+        "name": "logs",
+        "title": "Custom log file",
+        "description": "Collect your custom log files."
+      }
+    ],
+    "conditions": {
+      "kibana": {
+        "version": "^8.8.0"
+      }
+    },
+    "owner": {
+      "github": "elastic/elastic-agent-data-plane"
+    },
+    "categories": [
+      "custom",
+      "custom_logs"
+    ],
+    "signature_path": "/epr/log/log-2.3.0.zip.sig"
+  },
+  {
+    "name": "apm",
+    "title": "Elastic APM",
+    "version": "8.4.2",
+    "release": "ga",
+    "description": "Monitor, detect, and diagnose complex application performance issues.",
+    "type": "integration",
+    "download": "/epr/apm/apm-8.4.2.zip",
+    "path": "/package/apm/8.4.2",
+    "icons": [
+      {
+        "src": "/img/logo_apm.svg",
+        "path": "/package/apm/8.4.2/img/logo_apm.svg",
+        "title": "APM Logo",
+        "size": "32x32",
+        "type": "image/svg+xml"
+      }
+    ],
+    "policy_templates": [
+      {
+        "name": "apmserver",
+        "title": "Elastic APM Integration",
+        "description": "Elastic APM Integration"
+      }
+    ],
+    "conditions": {
+      "kibana": {
+        "version": "^8.4.0"
+      }
+    },
+    "owner": {
+      "github": "elastic/apm-server"
+    },
+    "categories": [
+      "elastic_stack",
+      "monitoring"
+    ],
+    "signature_path": "/epr/apm/apm-8.4.2.zip.sig"
+  },
+  {
+    "name": "elastic_agent",
+    "title": "Elastic Agent",
+    "version": "1.17.0",
+    "release": "ga",
+    "description": "Collect logs and metrics from Elastic Agents.",
+    "type": "integration",
+    "download": "/epr/elastic_agent/elastic_agent-1.17.0.zip",
+    "path": "/package/elastic_agent/1.17.0",
+    "icons": [
+      {
+        "src": "/img/logo_elastic_agent.svg",
+        "path": "/package/elastic_agent/1.17.0/img/logo_elastic_agent.svg",
+        "title": "logo Elastic Agent",
+        "size": "64x64",
+        "type": "image/svg+xml"
+      }
+    ],
+    "conditions": {
+      "kibana": {
+        "version": "^8.9.0"
+      }
+    },
+    "owner": {
+      "github": "elastic/elastic-agent"
+    },
+    "categories": [
+      "elastic_stack"
+    ],
+    "signature_path": "/epr/elastic_agent/elastic_agent-1.17.0.zip.sig"
+  },
+  {
+    "name": "endpoint",
+    "title": "Elastic Defend",
+    "version": "8.11.1",
+    "release": "ga",
+    "description": "Protect your hosts and cloud workloads with threat prevention, detection, and deep security data visibility.",
+    "type": "integration",
+    "download": "/epr/endpoint/endpoint-8.11.1.zip",
+    "path": "/package/endpoint/8.11.1",
+    "icons": [
+      {
+        "src": "/img/security-logo-color-64px.svg",
+        "path": "/package/endpoint/8.11.1/img/security-logo-color-64px.svg",
+        "size": "16x16",
+        "type": "image/svg+xml"
+      }
+    ],
+    "policy_templates": [
+      {
+        "name": "endpoint",
+        "title": "Endpoint Security Integration",
+        "description": "Interact with the endpoint."
+      }
+    ],
+    "conditions": {
+      "kibana": {
+        "version": "^8.11.0"
+      },
+      "elastic": {
+        "subscription": "basic",
+        "capabilities": [
+          "security"
+        ]
+      }
+    },
+    "owner": {
+      "type": "elastic",
+      "github": "elastic/security-defend-workflows"
+    },
+    "categories": [
+      "security",
+      "edr_xdr"
+    ],
+    "signature_path": "/epr/endpoint/endpoint-8.11.1.zip.sig"
+  },
+  {
+    "name": "synthetics",
+    "title": "Elastic Synthetics",
+    "version": "1.1.1",
+    "release": "ga",
+    "description": "Internal Elastic integration for providing access to private locations.",
+    "type": "integration",
+    "download": "/epr/synthetics/synthetics-1.1.1.zip",
+    "path": "/package/synthetics/1.1.1",
+    "icons": [
+      {
+        "src": "/img/uptime-logo-color-64px.svg",
+        "path": "/package/synthetics/1.1.1/img/uptime-logo-color-64px.svg",
+        "size": "16x16",
+        "type": "image/svg+xml"
+      }
+    ],
+    "policy_templates": [
+      {
+        "name": "synthetics",
+        "title": "Elastic Synthetics",
+        "description": "Perform synthetic health checks on network endpoints."
+      }
+    ],
+    "conditions": {
+      "kibana": {
+        "version": "^8.11.0"
+      }
+    },
+    "owner": {
+      "github": "elastic/uptime"
+    },
+    "categories": [
+      "observability"
+    ],
+    "signature_path": "/epr/synthetics/synthetics-1.1.1.zip.sig"
+  },
+  {
+    "name": "fleet_server",
+    "title": "Fleet Server",
+    "version": "1.3.1",
+    "release": "ga",
+    "description": "Centrally manage Elastic Agents with the Fleet Server integration.",
+    "type": "integration",
+    "download": "/epr/fleet_server/fleet_server-1.3.1.zip",
+    "path": "/package/fleet_server/1.3.1",
+    "icons": [
+      {
+        "src": "/img/logo_fleet_server.svg",
+        "path": "/package/fleet_server/1.3.1/img/logo_fleet_server.svg",
+        "title": "logo Fleet Server",
+        "size": "64x64",
+        "type": "image/svg+xml"
+      }
+    ],
+    "policy_templates": [
+      {
+        "name": "fleet_server",
+        "title": "Fleet Server",
+        "description": "Fleet Server setup"
+      }
+    ],
+    "conditions": {
+      "kibana": {
+        "version": "^8.8.0"
+      }
+    },
+    "owner": {
+      "github": "elastic/elastic-agent-control-plane"
+    },
+    "categories": [
+      "elastic_stack"
+    ],
+    "signature_path": "/epr/fleet_server/fleet_server-1.3.1.zip.sig"
+  },
+  {
+    "name": "mysql",
+    "title": "MySQL",
+    "version": "1.16.0",
+    "release": "ga",
+    "description": "Collect logs and metrics from MySQL servers with Elastic Agent.",
+    "type": "integration",
+    "download": "/epr/mysql/mysql-1.16.0.zip",
+    "path": "/package/mysql/1.16.0",
+    "icons": [
+      {
+        "src": "/img/logo_mysql.svg",
+        "path": "/package/mysql/1.16.0/img/logo_mysql.svg",
+        "title": "logo mysql",
+        "size": "32x32",
+        "type": "image/svg+xml"
+      }
+    ],
+    "policy_templates": [
+      {
+        "name": "mysql",
+        "title": "MySQL logs and metrics",
+        "description": "Collect logs and metrics from MySQL instances"
+      }
+    ],
+    "conditions": {
+      "kibana": {
+        "version": "^8.8.2"
+      },
+      "elastic": {
+        "subscription": "basic"
+      }
+    },
+    "owner": {
+      "type": "elastic",
+      "github": "elastic/obs-infraobs-integrations"
+    },
+    "categories": [
+      "datastore",
+      "observability"
+    ],
+    "signature_path": "/epr/mysql/mysql-1.16.0.zip.sig"
+  },
+  {
+    "name": "nginx",
+    "title": "Nginx",
+    "version": "1.17.0",
+    "release": "ga",
+    "description": "Collect logs and metrics from Nginx HTTP servers with Elastic Agent.",
+    "type": "integration",
+    "download": "/epr/nginx/nginx-1.17.0.zip",
+    "path": "/package/nginx/1.17.0",
+    "icons": [
+      {
+        "src": "/img/logo_nginx.svg",
+        "path": "/package/nginx/1.17.0/img/logo_nginx.svg",
+        "title": "logo nginx",
+        "size": "32x32",
+        "type": "image/svg+xml"
+      }
+    ],
+    "policy_templates": [
+      {
+        "name": "nginx",
+        "title": "Nginx logs and metrics",
+        "description": "Collect logs and metrics from Nginx instances"
+      }
+    ],
+    "conditions": {
+      "kibana": {
+        "version": "^8.8.0"
+      },
+      "elastic": {
+        "subscription": "basic"
+      }
+    },
+    "owner": {
+      "type": "elastic",
+      "github": "elastic/obs-infraobs-integrations"
+    },
+    "categories": [
+      "web",
+      "observability"
+    ],
+    "signature_path": "/epr/nginx/nginx-1.17.0.zip.sig"
+  },
+  {
+    "name": "security_detection_engine",
+    "title": "Prebuilt Security Detection Rules",
+    "version": "8.11.4",
+    "release": "ga",
+    "description": "Prebuilt detection rules for Elastic Security",
+    "type": "integration",
+    "download": "/epr/security_detection_engine/security_detection_engine-8.11.4.zip",
+    "path": "/package/security_detection_engine/8.11.4",
+    "icons": [
+      {
+        "src": "/img/security-logo-color-64px.svg",
+        "path": "/package/security_detection_engine/8.11.4/img/security-logo-color-64px.svg",
+        "size": "16x16",
+        "type": "image/svg+xml"
+      }
+    ],
+    "conditions": {
+      "kibana": {
+        "version": "^8.11.0"
+      }
+    },
+    "owner": {
+      "github": "elastic/protections"
+    },
+    "categories": [
+      "security"
+    ],
+    "signature_path": "/epr/security_detection_engine/security_detection_engine-8.11.4.zip.sig"
+  },
+  {
+    "name": "system",
+    "title": "System",
+    "version": "1.50.0",
+    "release": "ga",
+    "description": "Collect system logs and metrics from your servers with Elastic Agent.",
+    "type": "integration",
+    "download": "/epr/system/system-1.50.0.zip",
+    "path": "/package/system/1.50.0",
+    "icons": [
+      {
+        "src": "/img/system.svg",
+        "path": "/package/system/1.50.0/img/system.svg",
+        "title": "system",
+        "size": "1000x1000",
+        "type": "image/svg+xml"
+      }
+    ],
+    "policy_templates": [
+      {
+        "name": "system",
+        "title": "System logs and metrics",
+        "description": "Collect logs and metrics from System instances"
+      }
+    ],
+    "conditions": {
+      "kibana": {
+        "version": "^8.10.2"
+      }
+    },
+    "owner": {
+      "type": "elastic",
+      "github": "elastic/obs-infraobs-integrations"
+    },
+    "categories": [
+      "os_system"
+    ],
+    "signature_path": "/epr/system/system-1.50.0.zip.sig"
+  },
+  {
+    "name": "profiler_collector",
+    "title": "Universal Profiling Collector",
+    "version": "8.11.0",
+    "release": "ga",
+    "description": "Fleet-wide, whole-system, continuous profiling with zero instrumentation.",
+    "type": "integration",
+    "download": "/epr/profiler_collector/profiler_collector-8.11.0.zip",
+    "path": "/package/profiler_collector/8.11.0",
+    "icons": [
+      {
+        "src": "/img/profiler-logo-color-48px.svg",
+        "path": "/package/profiler_collector/8.11.0/img/profiler-logo-color-48px.svg",
+        "title": "Universal Profiling Logo",
+        "size": "48x46",
+        "type": "image/svg+xml"
+      }
+    ],
+    "policy_templates": [
+      {
+        "name": "universal_profiling_collector",
+        "title": "Universal Profiling Collection Service",
+        "description": "Interact with Universal Profiling."
+      }
+    ],
+    "conditions": {
+      "kibana": {
+        "version": "^8.10.3"
+      },
+      "elastic": {
+        "subscription": "basic"
+      }
+    },
+    "owner": {
+      "github": "elastic/profiling"
+    },
+    "categories": [
+      "elastic_stack",
+      "monitoring"
+    ],
+    "signature_path": "/epr/profiler_collector/profiler_collector-8.11.0.zip.sig"
+  },
+  {
+    "name": "profiler_symbolizer",
+    "title": "Universal Profiling Symbolizer",
+    "version": "8.10.0",
+    "release": "ga",
+    "description": "Fleet-wide, whole-system, continuous profiling with zero instrumentation.",
+    "type": "integration",
+    "download": "/epr/profiler_symbolizer/profiler_symbolizer-8.10.0.zip",
+    "path": "/package/profiler_symbolizer/8.10.0",
+    "icons": [
+      {
+        "src": "/img/profiler-logo-color-48px.svg",
+        "path": "/package/profiler_symbolizer/8.10.0/img/profiler-logo-color-48px.svg",
+        "title": "Universal Profiling Logo",
+        "size": "48x46",
+        "type": "image/svg+xml"
+      }
+    ],
+    "policy_templates": [
+      {
+        "name": "universal_profiling_symbolizer",
+        "title": "Universal Profiling Symbolization Service",
+        "description": "Interact with Universal Profiling."
+      }
+    ],
+    "conditions": {
+      "kibana": {
+        "version": "^8.10.2"
+      },
+      "elastic": {
+        "subscription": "basic"
+      }
+    },
+    "owner": {
+      "github": "elastic/profiling"
+    },
+    "categories": [
+      "elastic_stack",
+      "monitoring"
+    ],
+    "signature_path": "/epr/profiler_symbolizer/profiler_symbolizer-8.10.0.zip.sig"
+  },
+  {
+    "name": "windows",
+    "title": "Windows",
+    "version": "1.43.0",
+    "release": "ga",
+    "description": "Collect logs and metrics from Windows OS and services with Elastic Agent.",
+    "type": "integration",
+    "download": "/epr/windows/windows-1.43.0.zip",
+    "path": "/package/windows/1.43.0",
+    "icons": [
+      {
+        "src": "/img/logo_windows.svg",
+        "path": "/package/windows/1.43.0/img/logo_windows.svg",
+        "title": "logo windows",
+        "size": "32x32",
+        "type": "image/svg+xml"
+      }
+    ],
+    "policy_templates": [
+      {
+        "name": "windows",
+        "title": "Windows logs and metrics",
+        "description": "Collect logs and metrics from Windows instances"
+      }
+    ],
+    "conditions": {
+      "kibana": {
+        "version": "^8.8.0"
+      }
+    },
+    "owner": {
+      "github": "elastic/elastic-agent-data-plane"
+    },
+    "categories": [
+      "os_system",
+      "security"
+    ],
+    "signature_path": "/epr/windows/windows-1.43.0.zip.sig"
+  }
+]

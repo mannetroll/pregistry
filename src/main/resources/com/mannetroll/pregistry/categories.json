@@ -1,0 +1,60 @@
+[
+  {
+    "id": "custom",
+    "title": "Custom",
+    "count": 1
+  },
+  {
+    "id": "custom_logs",
+    "title": "Custom Logs",
+    "count": 1,
+    "parent_id": "custom",
+    "parent_title": "Custom"
+  },
+  {
+    "id": "datastore",
+    "title": "Database",
+    "count": 1
+  },
+  {
+    "id": "edr_xdr",
+    "title": "EDR/XDR",
+    "count": 1,
+    "parent_id": "security",
+    "parent_title": "Security"
+  },
+  {
+    "id": "elastic_stack",
+    "title": "Elastic Stack",
+    "count": 5
+  },
+  {
+    "id": "monitoring",
+    "title": "Monitoring",
+    "count": 3,
+    "parent_id": "observability",
+    "parent_title": "Observability"
+  },
+  {
+    "id": "observability",
+    "title": "Observability",
+    "count": 4
+  },
+  {
+    "id": "os_system",
+    "title": "Operating Systems",
+    "count": 2
+  },
+  {
+    "id": "security",
+    "title": "Security",
+    "count": 3
+  },
+  {
+    "id": "web",
+    "title": "Web Server",
+    "count": 2,
+    "parent_id": "observability",
+    "parent_title": "Observability"
+  }
+]
