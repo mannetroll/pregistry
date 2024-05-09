@@ -1,13 +1,29 @@
 Configuration:
-   Appenders:
-      Console:
-         name: Console_Appender
-         target: SYSTEM_OUT
-         JsonTemplateLayout:
-            eventTemplateUri: classpath:CustomEcsLayout.json
-
-   Loggers:
-      Root:
-         level: info
-         AppenderRef:
-         -  ref: Console_Appender
+  Properties:
+    property:
+      - name: applicationName
+        value: pregistry
+  Appenders:
+    RollingFile:
+      - name: MetricJsonDailyRollingFileAppenderRef
+        fileName: /var/log/${applicationName}/metrics.log
+        filePattern: /var/log/${applicationName}/metrics.%d{yyyy-MM-dd}.log
+        MetricJsonLayout:
+          application: ${applicationName}
+          namespace: alces
+          locationInfo: true
+          sort: true
+        Policies:
+          CronTriggeringPolicy:
+            evaluateOnStartup: true
+            schedule: 0 0 0 * * ?
+        DefaultRollOverStrategy:
+          Delete:
+            basePath: /var/log/${applicationName}/
+            IfLastModified:
+              age: 1d
+  Loggers:
+    Root:
+      level: info
+      AppenderRef:
+        - ref: MetricJsonDailyRollingFileAppenderRef
