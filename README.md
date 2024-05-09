@@ -6,8 +6,8 @@
 
     docker run -it -p 8088:8080 docker.elastic.co/package-registry/distribution:lite-8.11.3
 
-    curl -is "http://127.0.0.1:8088/search?package=apm&prerelease=false&kibana.version=8.11.3"
-    curl -is "http://127.0.0.1:8088/search?package=synthetics&prerelease=true&kibana.version=8.11.3"
+    curl -is "http://127.0.0.1:2020/search?package=apm&prerelease=false&kibana.version=8.11.3"
+    curl -is "http://127.0.0.1:2020/search?package=synthetics&prerelease=true&kibana.version=8.11.3"
     curl -is "http://127.0.0.1:2020/search?kibana.version=8.11.3"
     curl -is "http://127.0.0.1:2020/categories?kibana.version=8.11.3"
     
