@@ -8,11 +8,8 @@ Configuration:
       - name: MetricJsonDailyRollingFileAppenderRef
         fileName: /var/log/${applicationName}/metrics.log
         filePattern: /var/log/${applicationName}/metrics.%d{yyyy-MM-dd}.log
-        MetricJsonLayout:
-          application: ${applicationName}
-          namespace: alces
-          locationInfo: true
-          sort: true
+        JsonTemplateLayout:
+          eventTemplateUri: classpath:EcsLayout.json
         Policies:
           CronTriggeringPolicy:
             evaluateOnStartup: true
