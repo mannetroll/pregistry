@@ -1,0 +1,28 @@
+#
+# pregistry
+#
+# sudo mkdir -p /var/log/pregistry
+# sudo mkdir -p /usr/local/share/pregistry
+#
+
+#
+# /etc/systemd/system/pregistry.service
+#
+[Unit]
+Description=pregistry
+After=syslog.target
+
+[Service]
+User=root
+ExecStart=/usr/bin/java -jar /usr/local/share/pregistry/pregistry-1.0.0-SNAPSHOT.jar
+SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target
+
+#
+# sudo systemctl daemon-reload
+# sudo systemctl enable pregistry
+# sudo systemctl start pregistry
+# sudo systemctl status pregistry
+#
